@@ -1,6 +1,6 @@
 import {Routes,Route} from 'react-router-dom'
 import { Landing } from './components/Landing'
-import { Catglass } from './components/products/Catglass'
+import  Catglass  from './components/products/Catglass'
 import { Scific } from './components/products/Scific'
 import Header from './components/Header'
 import Footer from './components/Footer'

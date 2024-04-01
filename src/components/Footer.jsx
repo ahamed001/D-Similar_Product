@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='flex justify-around bg-black text-white py-2'>
+    <footer className='flex justify-around items-end bg-black text-white py-2 bottom-0'>
         <div className=' cursor-pointer'>
             <p>Contact us</p>
             <p>Facebook</p>
