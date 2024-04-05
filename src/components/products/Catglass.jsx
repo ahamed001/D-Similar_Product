@@ -32,8 +32,10 @@ const Catglass = () => {
   return (
     <div className='flex justify-around h-screen mt-10'>
       <div className='border-1 w-1/3 h-[60vh]'>
-        <img src={selectedImage} alt="Selected Image" />
-        <div className='flex justify-center'>
+        <div className='h-[56vh] flex items-center bg-gray-50'>
+          <img src={selectedImage} alt="Selected Image" />
+        </div>
+        <div className='flex justify-center my-2'>
           {ProductImages.map((image, index) => (
             <img
               key={index}
@@ -45,7 +47,7 @@ const Catglass = () => {
           ))}
         </div>
       </div>
-      <div className='border-1 w-1/3 h-[60vh]'>
+      <div className='border-1 w-1/3 h-[56vh]'>
         <Canvas>
           <OrbitControls />
           <Environment preset='studio' />
@@ -63,8 +65,17 @@ const Catglass = () => {
         </div>
       </div>
       <div className='border-1 w-1/4 h-[60vh]'>
-        <h1 className=' font-bold'>Price Details</h1>
-        <button className=' bg-blue-500 text-white p-2 rounded-md'><a href='https://www.effeconsultancy.com/computer-glasses' target='blank'>Virtual TryOn</a></button>
+        <h1 className=' font-bold text-2xl my-2'>Price Details</h1>
+        <button className=' bg-blue-400 text-white p-2 rounded-md hover:bg-blue-600'><a href='https://www.effeconsultancy.com/computer-glasses' target='blank'>Virtual TryOn</a></button>
+        <div>
+          <h1 className=' text-lg font-bold my-2'>VINCENT CHASE EYEWEAR Unisex Adult Round Polarization Sunglasses</h1>
+          <p>₹549</p>
+          <div className='flex'>
+            <p>M.R.P : </p> <strike>₹2,500</strike>
+          </div>
+          <p>Inclusive of all taxes</p>
+          <button className='bg-blue-400 text-white py-1 px-28 rounded-full my-2 hover:bg-blue-600'>Buy Now</button>
+        </div>
       </div>
     </div>
   );
