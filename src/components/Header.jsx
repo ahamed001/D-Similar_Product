@@ -2,16 +2,11 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className='bg-black text-white font-semibold text-2xl py-2'>
-        <div className=' absolute px-2'>
-          EFFE
-        </div>
-        <ul className='flex justify-around relative'>
-          <li>Home</li>
-          <li>Glasses</li>
-          <li>Furniture</li>
-        </ul>
-      </header>
+    <header className='bg-[#F1F1FE] font-semibold text-2xl py-3'>
+      <div className=' px-5 text-3xl font-bold'>
+        D-Similar
+      </div>
+    </header>
   )
 }
 
