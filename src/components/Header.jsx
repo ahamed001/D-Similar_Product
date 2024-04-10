@@ -2,11 +2,11 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className='bg-[#2B2B2B] text-white font-semibold text-3xl py-2 h-20 font-serif'>
-        <div>
-          EFFE
-        </div>
-      </header>
+    <header className='bg-[#F1F1FE] font-semibold text-2xl py-3'>
+      <div className=' px-5 text-3xl font-bold'>
+        D-Similar
+      </div>
+    </header>
   )
 }
 
