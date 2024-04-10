@@ -2,15 +2,10 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className='bg-black text-white font-semibold text-2xl py-2'>
-        <div className=' absolute px-2'>
+    <header className='bg-[#2B2B2B] text-white font-semibold text-3xl py-2 h-20 font-serif'>
+        <div>
           EFFE
         </div>
-        <ul className='flex justify-around relative'>
-          <li>Home</li>
-          <li>Glasses</li>
-          <li>Furniture</li>
-        </ul>
       </header>
   )
 }
