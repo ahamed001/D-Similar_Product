@@ -14,6 +14,7 @@ function App() {
           <Route path='catglass' element={<Catglass/>}/>
           <Route path='scific' element={<Scific/>}/>
         </Routes>
+        
     </>
   )
 }
