@@ -3,6 +3,8 @@ import ProductImages from '../../mockdata/images';
 import ProductModels from '../../mockdata/models';
 import { Environment, OrbitControls, useGLTF } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import { Md3DRotation } from "react-icons/md";
+
 
 const ModelTest = ({ src }) => {
   const [error, setError] = useState(null);
@@ -30,8 +32,12 @@ const Catglass = () => {
   };
 
   return (
-    <div className='flex justify-around h-screen mt-10'>
-      <div className='border-1 w-1/3 h-[60vh]'>
+    <div>
+      <nav className=' bg-gradient-to-l from-[#DBDBF6] to-[#F1F1FE] w-full h-52'>
+        <h2 className=' font-bold text-5xl text-gray-700 flex justify-center items-center h-full'>Product Details</h2>
+      </nav>
+    <section className=' md:flex justify-center mt-10'>
+      <div className='sm:w-[100%] md:w-[40%] h-[60vh]'>
         <div className='h-[56vh] flex items-center bg-gray-50'>
           <img src={selectedImage} alt="Selected Image" />
         </div>
@@ -47,7 +53,12 @@ const Catglass = () => {
           ))}
         </div>
       </div>
-      <div className='border-1 w-1/3 h-[56vh]'>
+      <div className='sm:w-[100%] md:w-[40%] h-[60vh] ml-10'>
+        <h2 className=' text-3xl font-medium'>Cat Eye Glass Varients</h2>
+      </div>
+    </section>
+    <div className=' flex justify-center my-20 text-3xl font-semibold'><Md3DRotation/><h1 className=' mx-2'>- 3d Model</h1></div>
+    <div className='sm:w-[100%] md:w-[70%] h-[60vh] border-2 rounded-xl my-16 mx-auto'>
         <Canvas>
           <OrbitControls />
           <Environment preset='studio' />
@@ -62,19 +73,6 @@ const Catglass = () => {
               onMouseEnter={() => handleModelSelection(model)}
             />
           ))}
-        </div>
-      </div>
-      <div className='border-1 w-1/4 h-[60vh]'>
-        <h1 className=' font-bold text-2xl my-2'>Price Details</h1>
-        <button className=' bg-blue-400 text-white p-2 rounded-md hover:bg-blue-600'><a href='https://www.effeconsultancy.com/computer-glasses' target='blank'>Virtual TryOn</a></button>
-        <div>
-          <h1 className=' text-lg font-bold my-2'>VINCENT CHASE EYEWEAR Unisex Adult Round Polarization Sunglasses</h1>
-          <p>₹549</p>
-          <div className='flex'>
-            <p>M.R.P : </p> <strike>₹2,500</strike>
-          </div>
-          <p>Inclusive of all taxes</p>
-          <button className='bg-blue-400 text-white py-1 px-28 rounded-full my-2 hover:bg-blue-600'>Buy Now</button>
         </div>
       </div>
     </div>
