@@ -6,16 +6,40 @@ const Landing = () => {
 
     const products = [
         {
-          id: 1,
-          image: "https://ik.imagekit.io/orm5ahbvhz/D-similar/furnitures.jpg?updatedAt=1711954378722",
-          name: "Furniture",
-          path: `scific`
+            id: 1,
+            image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
+            name: "View",
+            path: `catglass`
         },
         {
-          id: 2,
-          image: "https://ik.imagekit.io/orm5ahbvhz/D-similar/glasses.jpg?updatedAt=1711954401211",
-          name: "Glass",
-          path: `catglass`
+            id: 2,
+            image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
+            name: "View",
+            path: `catglass`
+        },
+        {
+            id: 3,
+            image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
+            name: "View",
+            path: `catglass`
+        },
+        {
+            id: 4,
+            image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
+            name: "View",
+            path: `catglass`
+        },
+        {
+            id: 5,
+            image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
+            name: "View",
+            path: `catglass`
+        },
+        {
+            id: 6,
+            image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
+            name: "View",
+            path: `catglass`
         },
     ]
     
@@ -32,11 +56,11 @@ const Landing = () => {
                     <button className=' border-2 border-purple-400 text-purple-400 font-semibold rounded-md px-4 py-2 my-4 hover:bg-purple-400 hover:text-white hover:ease-in-out duration-300'> SHOP NOW</button>
                 </div>
             </section>
-            <section className='grid lg:grid-cols-3 gap-4 md:grid-cols-2 place-items-center h-[100vh] bg-blue-50'>
+            <section className=' grid lg:grid-cols-3 gap-4 md:grid-cols-2 place-items-center h-[100vh] bg-blue-50'>
                 {
                     products.map((i, id) => (
                         <div key={i.id}>
-                            <img src = {i.image} alt="Footwear" className='w-96 my-4 shadow-md' />
+                            <img src = {i.image} alt="Footwear" className=' w-72 my-4 shadow-md' />
                             <Link to = {i.path}>
                                 <span className=' border-2 border-purple-400 text-purple-400 my-2 px-4 py-2 cursor-pointer rounded-md text-xl font-bold hover:bg-purple-400 hover:text-white hover:ease-in-out duration-300'>{i.name}</span>
                             </Link>
