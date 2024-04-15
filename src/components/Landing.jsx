@@ -19,6 +19,7 @@ const Landing = () => {
         },
     ]
     
+    
     return (
         <div>
             <section className=' h-[95vh] flex justify-around bg-gradient-to-l from-[#DBDBF6] to-[#F1F1FE]'>
