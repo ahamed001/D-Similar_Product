@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import chairImage from '../assets/chair.png';
+import { Scene } from 'three';
+import { Environment, OrbitControls, useGLTF } from '@react-three/drei';
+import { Canvas,useFrame } from '@react-three/fiber';
 
 const Landing = () => {
 
@@ -43,11 +46,25 @@ const Landing = () => {
         },
     ]
     
+    function Model(props){
+        const{scene}= useGLTF("/redglass.glb");
+        const modelRef = useRef();
+        useFrame(() => {
+            modelRef.current.rotation.y += 0.007; // Adjust rotation speed as needed
+        });
+        return <primitive object={scene} ref={modelRef} {...props}/>
+    }
+    
     return (
         <div>
             <section className=' h-[95vh] flex justify-around bg-gradient-to-l from-[#DBDBF6] to-[#F1F1FE]'>
-                <div className='w-[45%]'>
-                    <img src={chairImage} alt="chair" />
+                <div className='w-[55%]'>
+                    {/* <img src={chairImage} alt="chair" /> */}
+                    <Canvas>
+                        <OrbitControls/>
+                        <Environment preset='studio'/>
+                        <Model/>
+                    </Canvas>
                 </div>
                 <div className=' flex flex-col items-center justify-center'>
                     <p className=' text-2xl font-semibold my-2'>NEW COLLECTION</p>
