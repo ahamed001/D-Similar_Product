@@ -1,7 +1,5 @@
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
-import chairImage from '../assets/chair.png';
-import { Scene } from 'three';
 import { Environment, OrbitControls, useGLTF } from '@react-three/drei';
 import { Canvas,useFrame } from '@react-three/fiber';
 
@@ -59,7 +57,6 @@ const Landing = () => {
         <div>
             <section className=' h-[95vh] flex justify-around bg-gradient-to-l from-[#DBDBF6] to-[#F1F1FE]'>
                 <div className='w-[55%]'>
-                    {/* <img src={chairImage} alt="chair" /> */}
                     <Canvas>
                         <OrbitControls/>
                         <Environment preset='studio'/>
