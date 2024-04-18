@@ -5,6 +5,7 @@ import { Environment, OrbitControls, useGLTF } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Md3DRotation } from "react-icons/md";
 
+
 const ModelTest = ({ src }) => {
   const [error, setError] = useState(null);
   const { scene } = useGLTF(src, '', setError);
@@ -18,7 +19,7 @@ const ModelTest = ({ src }) => {
   return <primitive object={scene} />;
 };
 
-const Catglass = () => {
+const Glass6 = () => {
   const [selectedImage, setSelectedImage] = useState(ProductImages[0].url);
   const [selectedModel, setSelectedModel] = useState(ProductModels[0]);
 
@@ -53,7 +54,7 @@ const Catglass = () => {
         </div>
       </div>
       <div className='sm:w-[100%] md:w-[40%] h-[60vh] ml-10'>
-          <h2 className=' text-3xl font-medium'>Cat Eye Glass Varients</h2>
+        <h2 className=' text-3xl font-medium'>Glass6 Varients</h2>
       </div>
     </section>
     <div className=' flex justify-center my-20 text-3xl font-semibold'><Md3DRotation/><h1 className=' mx-2'>- 3d Model</h1></div>
@@ -78,4 +79,4 @@ const Catglass = () => {
   );
 };
 
-export default Catglass;
+export default Glass6;

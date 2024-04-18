@@ -15,31 +15,31 @@ const Landing = () => {
             id: 2,
             image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
             name: "View",
-            path: `catglass`
+            path: `glass2`
         },
         {
             id: 3,
             image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
             name: "View",
-            path: `catglass`
+            path: `glass3`
         },
         {
             id: 4,
             image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
             name: "View",
-            path: `catglass`
+            path: `glass4`
         },
         {
             id: 5,
             image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
             name: "View",
-            path: `catglass`
+            path: `glass5`
         },
         {
             id: 6,
             image: "https://ik.imagekit.io/yvkwe3mb0/Glasses/glasses5.jpg?updatedAt=1713161193801",
             name: "View",
-            path: `catglass`
+            path: `glass6`
         },
     ]
     
