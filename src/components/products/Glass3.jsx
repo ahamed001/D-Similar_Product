@@ -4,7 +4,8 @@ import ProductModels from '../../mockdata/models';
 import { Environment, OrbitControls, useGLTF } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Md3DRotation } from "react-icons/md";
-
+import {Rating} from "@mui/material";
+import { TiSocialFacebook, TiSocialGithub, TiSocialInstagram, TiSocialTwitter } from "react-icons/ti";
 
 const ModelTest = ({ src }) => {
   const [error, setError] = useState(null);
@@ -54,8 +55,41 @@ const Glass3 = () => {
         </div>
       </div>
       <div className='sm:w-[100%] md:w-[40%] h-[60vh] ml-10'>
-        <h2 className=' text-3xl font-medium'>Glass3 Varients</h2>
-      </div>
+          <h2 className=' text-3xl font-normal mb-3'>Glass3 Variants</h2>
+          <div className='flex my-3'>
+            <Rating
+              defaultValue={4}
+              size='medium'
+            />
+            <p className='mx-3'>(customer review)</p>
+          </div>
+          <p className=' text-2xl'>$80.00</p>
+          <p className=' text-gray-400 mb-10'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor.
+            Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. 
+            Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.
+          </p>
+          <div className=' w-[100%] h-[0.5px] bg-gray-200 my-6'></div>
+
+          <h3 className=' text-xl font-medium my-5'>Available Option</h3>
+          <div>
+            <p className=' font-medium mb-2'>Quantity</p>
+            <input type="number" value={1} className=' border-2 w-16 h-12 pl-6 rounded-lg mr-5' />
+            <button className=' bg-black text-white w-52 h-12 rounded-lg font-semibold text-lg'>+ADD TO CART</button>
+            <div className=' flex my-6'>
+              <p className=' mr-5 font-medium cursor-pointer text-purple-500'>+ Add to Wishlist</p>
+              <p className=' mr-5 font-medium cursor-pointer text-purple-500'>Lorem ipsum</p>
+            </div>
+            <div className=' flex items-center'>
+              <p className=' font-medium'> Share : </p> 
+              <TiSocialFacebook className=' mx-3 text-2xl text-purple-500 cursor-pointer'/>
+              <TiSocialInstagram className=' mx-3 text-2xl text-purple-500 cursor-pointer'/>
+              <TiSocialGithub className=' mx-3 text-2xl text-purple-500 cursor-pointer'/>
+              <TiSocialTwitter className=' mx-3 text-2xl text-purple-500 cursor-pointer'/>
+            </div>
+          </div>
+          <div className=' w-[100%] h-[0.5px] bg-gray-200 my-8'></div>
+        </div>
     </section>
     <div className=' flex justify-center my-20 text-3xl font-semibold'><Md3DRotation/><h1 className=' mx-2'>- 3d Model</h1></div>
     <div className='sm:w-[100%] md:w-[70%] h-[60vh] border-2 rounded-xl my-16 mx-auto'>
