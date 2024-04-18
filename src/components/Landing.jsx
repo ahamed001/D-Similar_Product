@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
-import chairImage from '../assets/chair.png';
 import { Scene } from 'three';
 import { Environment, OrbitControls, useGLTF } from '@react-three/drei';
 import { Canvas,useFrame } from '@react-three/fiber';
@@ -47,10 +46,10 @@ const Landing = () => {
     ]
     
     function Model(props){
-        const{scene}= useGLTF("/redglass.glb");
+        const{scene}= useGLTF("/langingGlass.glb");
         const modelRef = useRef();
         useFrame(() => {
-            modelRef.current.rotation.y += 0.007; // Adjust rotation speed as needed
+            modelRef.current.rotation.y += 0.005; // Adjust rotation speed as needed
         });
         return <primitive object={scene} ref={modelRef} {...props}/>
     }
@@ -59,7 +58,6 @@ const Landing = () => {
         <div>
             <section className=' h-[95vh] flex justify-around bg-gradient-to-l from-[#DBDBF6] to-[#F1F1FE]'>
                 <div className='w-[55%]'>
-                    {/* <img src={chairImage} alt="chair" /> */}
                     <Canvas>
                         <OrbitControls/>
                         <Environment preset='studio'/>
@@ -69,12 +67,12 @@ const Landing = () => {
                 <div className=' flex flex-col items-center justify-center'>
                     <p className=' text-2xl font-semibold my-2'>NEW COLLECTION</p>
                     <p className=' text-5xl font-bold mb-2'>Best Of NeoCon Gold Award</p>
-                    <button className=' border-2 border-purple-400 text-purple-400 font-semibold rounded-md px-4 py-2 my-4 hover:bg-purple-400 hover:text-white hover:ease-in-out duration-300'> SHOP NOW</button>
+                    <a href='#model'> <button className=' border-2 border-purple-400 text-purple-400 font-semibold rounded-md px-4 py-2 my-4 hover:bg-purple-400 hover:text-white hover:ease-in-out duration-300'>SHOP NOW</button></a>
                 </div>
             </section>
-            <section className=' grid lg:grid-cols-3 gap-4 md:grid-cols-2 place-items-center h-[100vh] bg-blue-50'>
+            <section className=' grid lg:grid-cols-3 gap-4 md:grid-cols-2 place-items-center h-[100vh] bg-blue-50' id='model'>
                 {
-                    products.map((i, id) => (
+                    products.map((i) => (
                         <div key={i.id}>
                             <img src = {i.image} alt="Footwear" className=' w-72 my-4 shadow-md' />
                             <Link to = {i.path}>

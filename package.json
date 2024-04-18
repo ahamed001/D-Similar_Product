@@ -16,6 +16,7 @@
     "@mui/styled-engine-sc": "6.0.0-alpha.18",
     "@react-three/drei": "^9.102.6",
     "@react-three/fiber": "^8.16.0",
+    "ar.js": "^2.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
