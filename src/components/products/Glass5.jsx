@@ -20,7 +20,7 @@ const ModelTest = ({ src }) => {
   return <primitive object={scene} />;
 };
 
-const Catglass = () => {
+const Glass5 = () => {
   const [selectedImage, setSelectedImage] = useState(ProductImages[0].url);
   const [selectedModel, setSelectedModel] = useState(ProductModels[0]);
 
@@ -37,25 +37,25 @@ const Catglass = () => {
       <nav className=' bg-gradient-to-l from-[#DBDBF6] to-[#F1F1FE] w-full h-52'>
         <h2 className=' font-bold text-5xl text-gray-700 flex justify-center items-center h-full'>Product Details</h2>
       </nav>
-      <section className=' md:flex justify-center mt-10'>
-        <div className='sm:w-[100%] md:w-[40%] h-[60vh]'>
-          <div className='h-[56vh] flex items-center bg-gray-50'>
-            <img src={selectedImage} alt="Selected Image" className=' hover:p-8 hover:ease-in-out hover:duration-200'/>
-          </div>
-          <div className='flex justify-center my-2'>
-            {ProductImages.map((image, index) => (
-              <img
-                key={index}
-                src={image.url}
-                alt={`Image ${index}`}
-                className={'w-20 h-20 p-1 mx-1 border-[1px] border-gray-400 my-4'}
-                onMouseEnter={() => handleImageSelection(image.url)}
-              />
-            ))}
-          </div>
+    <section className=' md:flex justify-center mt-10'>
+      <div className='sm:w-[100%] md:w-[40%] h-[60vh]'>
+        <div className='h-[56vh] flex items-center bg-gray-50'>
+          <img src={selectedImage} alt="Selected Image" />
         </div>
-        <div className='sm:w-[100%] md:w-[40%] h-[60vh] ml-10'>
-          <h2 className=' text-3xl font-normal mb-3'>Cat Eye Glass Variants</h2>
+        <div className='flex justify-center my-2'>
+          {ProductImages.map((image, index) => (
+            <img
+              key={index}
+              src={image.url}
+              alt={`Image ${index}`}
+              className={'w-10 h-10 border-black p-1 mx-1 border-2 rounded-full'}
+              onMouseEnter={() => handleImageSelection(image.url)}
+            />
+          ))}
+        </div>
+      </div>
+      <div className='sm:w-[100%] md:w-[40%] h-[60vh] ml-10'>
+          <h2 className=' text-3xl font-normal mb-3'>Glass5 Variants</h2>
           <div className='flex my-3'>
             <Rating
               defaultValue={4}
@@ -72,7 +72,7 @@ const Catglass = () => {
           <div className=' w-[100%] h-[0.5px] bg-gray-200 my-6'></div>
 
           <h3 className=' text-xl font-medium my-5'>Available Option</h3>
-          
+          <div>
             <p className=' font-medium mb-2'>Quantity</p>
             <input type="number" value={1} className=' border-2 w-16 h-12 pl-6 rounded-lg mr-5' />
             <button className=' bg-black text-white w-52 h-12 rounded-lg font-semibold text-lg'>+ADD TO CART</button>
@@ -87,27 +87,23 @@ const Catglass = () => {
               <TiSocialGithub className=' mx-3 text-2xl text-purple-500 cursor-pointer'/>
               <TiSocialTwitter className=' mx-3 text-2xl text-purple-500 cursor-pointer'/>
             </div>
+          </div>
           <div className=' w-[100%] h-[0.5px] bg-gray-200 my-8'></div>
         </div>
-      </section>
-      <div className=' flex justify-center my-20 text-3xl font-semibold'>
-        <Md3DRotation />
-        <h1 className=' mx-2'>
-          - 3d Model
-        </h1>
-      </div>
-      <div className='sm:w-[100%] md:w-[70%] h-[60vh] border-2 rounded-xl my-16 mx-auto'>
+    </section>
+    <div className=' flex justify-center my-20 text-3xl font-semibold'><Md3DRotation/><h1 className=' mx-2'>- 3d Model</h1></div>
+    <div className='sm:w-[100%] md:w-[70%] h-[60vh] border-2 rounded-xl my-16 mx-auto'>
         <Canvas>
           <OrbitControls />
           <Environment preset='studio' />
           <ModelTest src={selectedModel.src} />
         </Canvas>
-        <div className='flex justify-center my-3'>
+        <div className='flex justify-center'>
           {ProductModels.map((model, index) => (
             <img
               key={index}
               src={model.img}
-              className={'w-20 h-16 p-1 mx-1 border-[1px] border-gray-400 my-4'}
+              className={'w-10 h-10 border-black p-1 mx-1 border-2 rounded-full'}
               onMouseEnter={() => handleModelSelection(model)}
             />
           ))}
@@ -117,4 +113,4 @@ const Catglass = () => {
   );
 };
 
-export default Catglass;
+export default Glass5;
